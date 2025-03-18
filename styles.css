@@ -7,8 +7,8 @@
 /* Global styling */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: hsl(0, 0%, 20%);
-    color: hsl(0, 0%, 20%);
+    background-color: rgba(4, 49, 2, 0.85);
+    color: rgba(4, 49, 2, 0.85);
     line-height: 1.6;
 }
 
