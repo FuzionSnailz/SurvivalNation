@@ -66,7 +66,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f5f5dc;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 12px;
@@ -108,7 +108,7 @@ main {
 }
 
 .goal {
-    background-color: #fff8dc; /* Light parchment background */
+    background-color: #f5f5dc; /* Light parchment background */
     border: 2px solid #8b4513;
     padding: 20px;
     margin-bottom: 20px;
@@ -123,7 +123,7 @@ main {
 /* Footer styling */
 footer {
     background-color: #8b4513;
-    color: #fff;
+    color: #f5f5dc;
     text-align: center;
     padding: 10px 0;
     position: relative;
