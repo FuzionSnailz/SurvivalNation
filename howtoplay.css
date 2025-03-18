@@ -1,0 +1,147 @@
+/* Separate styling for How to Play page */
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f5f5dc; /* Board game style background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.subpage-header {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.subpage-header img {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+}
+
+.header-container {
+    background-color: rgba(139, 69, 19, 0.85); /* Semi-transparent wood-like header */
+    color: #f5f5dc;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation styling for the Download button */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the navigation items */
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Golden hover effect */
+}
+
+/* Download button styling */
+nav ul li a.download-button {
+    background-color: #d2691e; /* Rich color for the Download button */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.download-button:hover {
+    background-color: #8b4513; /* Darker on hover for contrast */
+    color: #f5f5dc; /* Light text color for hover */
+}
+
+main {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8b4513;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #8b4513;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Style for images to center and scale */
+.game-board-image, .mini-game-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* Center and add spacing around the images */
+}
+
+footer {
+    background-color: #8b4513;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}

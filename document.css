@@ -1,0 +1,181 @@
+/* Global styling */
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f5f5dc; /* Board game style background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.subpage-header {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.subpage-header img {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+}
+
+.header-container {
+    background-color: rgba(139, 69, 19, 0.85); /* Semi-transparent wood-like header */
+    color: #f5f5dc;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Golden hover effect */
+}
+
+/* Download button styling */
+nav ul li a.download-button {
+    background-color: #d2691e; /* Rich color for the Download button */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a.download-button:hover {
+    background-color: #8b4513; /* Darker on hover for contrast */
+    color: #f5f5dc; /* Light text color for hover */
+}
+
+/* Main content */
+main {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8b4513;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Links and text styling */
+section p, section ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Document buttons */
+.document-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.document-buttons a {
+    display: block;
+    width: 90%; /* Slightly less than paragraph width */
+    max-width: 600px;
+    padding: 15px;
+    background-color: #8b4513; /* Matches site theme */
+    color: #f5f5dc; /* Light color for text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.document-buttons a:hover {
+    background-color: #d2691e; /* Slightly brighter for hover */
+    color: #fff; /* Full white on hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.documents p {
+    margin-bottom: 40px; /* Increase space below the paragraph */
+    text-align: center; /* Center-align the text */
+    font-size: 1.2rem; /* Slightly larger font for better readability */
+    font-weight: 500; /* Add a slight emphasis */
+    color: #8b4513; /* Match the theme color */
+    line-height: 1.8; /* Improve text spacing */
+}
+
+/* Centered and responsive images */
+.centered-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Footer */
+footer {
+    background-color: #8b4513;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}

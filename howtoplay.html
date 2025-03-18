@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - Overthrone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="howtoplay.css"> <!-- Separate stylesheet for "How to Play" page -->
+</head>
+<body>
+    <header>
+        <div class="subpage-header">
+            <img src="header-image.jpg" alt="Overthrone Game Banner" class="header-image">
+        </div>
+        <div class="header-container">
+            <h1>Overthrone</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="howtoplay.html">How to Play</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="https://github.com/FuzionSNZ/GVSU-CIS641-GameSmiths/blob/main/docs/software_requirements_specification.md" class="download-button">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="how-to-play">
+        <h2>How to Play Overthrone</h2>
+        <section class="overview">
+            <h3>Game Objective</h3>
+            <p>Overthrone is a board game where players compete to finish the game with the most points. Players move around the board, landing on various spaces that can either help or hinder them, and engage in mini-games for extra points.</p>
+        </section>
+
+        <section class="rules">
+            <h3>Game Rules</h3>
+            <ul>
+                <li>Set the total number of turns for the game.</li>
+                <li>Choose between 2-8 players. These can be CPU or human players.</li>
+                <li>Pick a game map/table to play on, and create a lobby (public or private).</li>
+                <li>Once the game starts, each player rolls a die to determine turn order. The highest roller goes first.</li>
+            </ul>
+            <img src="assets/Gameboard_Long.png" alt="Overthrone Game Board" class="game-board-image">
+        </section>
+
+        <section class="spaces">
+            <h3>Board Spaces</h3>
+            <ul>
+                <li><strong>"S" Spaces:</strong> Safe zones where players cannot be affected by other players' actions.</li>
+                <li><strong>"N" Spaces:</strong> Reset all players' points to zero.</li>
+                <li><strong>"Z" Spaces:</strong> Move all players backward a number of spaces, determined by the number rolled on the dice. Only the active player has the effect of the space applied.</li>
+                <li><strong>"Choose Path" Spaces:</strong> Stop here and choose between the optional paths to proceed down.</li>
+                <li><strong>"GP" Spaces:</strong> Give points to another player (GP2 = give 2 points).</li>
+                <li><strong>"TP" Spaces:</strong> Take points from another player (TP2 = take 2 points).</li>
+                <li><strong>"+X" Spaces:</strong> Add X points to your total.</li>
+                <li><strong>"-X" Spaces:</strong> Subtract X points from your total.</li>
+                <li><strong>"END" Spaces:</strong> Go to a random stat point.</li>
+            </ul>
+        </section>
+
+        <section class="minigames">
+            <h3>Mini-Games</h3>
+            <p>At the end of each round, players compete in a random mini-game. The mini-game winner(s) gain extra points based on their placement.</p>
+            
+            <h4>Snake Game</h4>
+            <p>In the Snake Game mini-game, two players control snakes that compete to eat randomly generated fruits and grow longer. There are three types of fruits—orange, apple, and pineapple—which add length and score when eaten. Players can also eat each other’s segments, transferring the eaten part to the snake that ate it, along with the corresponding score. The game includes randomly generated walls that add a challenge, and hitting a wall causes the other player to win. If a snake collides with the other, the segments that were eaten are added to the winner’s snake, and the loser’s score is reduced. The game ends when one player loses by hitting a wall or when the timer runs out. The winner of the Snake Game gains extra points based on their performance.</p>
+            <img src="assets/SnakeGame.png" alt="Snake Game" class="mini-game-image">
+        
+            <h4>Frog Crossing Game</h4>
+            <p>In the Frog Crossing mini-game, players race to cross a busy road filled with randomly generated cars. The game features three roads with six lanes in total, where cars move in opposite directions. Players control their frogs, which can move up, down, or sideways, but not diagonally. The goal is to reach the other side of the road first without being hit by a car. If a frog is hit, the other player wins the round. The game is played in a head-to-head format, where the first frog to cross wins, and the other player earns points based on their placement. Cars move at random speeds, making the game unpredictable and challenging. The winner of the mini-game gains extra points toward the final score.</p>
+            <img src="assets/FrogGame.png" alt="Frog Crossing Game" class="mini-game-image">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Overthrone. All rights reserved.</p>
+    </footer>
+</body>
+</html>
