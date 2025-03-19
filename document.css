@@ -1,7 +1,7 @@
 /* Global styling1 */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: #f5f5dc;
+    background-color: rgba(4, 49, 2, 0.85);
     color: #333;
     line-height: 1.6;
 }
