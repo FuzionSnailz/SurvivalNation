@@ -1,7 +1,7 @@
 /* Global styling */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: #f5f5dc; /* Board game style background */
+    background-color: #f5f5dc;
     color: #333;
     line-height: 1.6;
 }
@@ -49,7 +49,7 @@ h1 {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center;
     align-items: center;
 }
 
@@ -66,7 +66,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* Golden hover effect */
+    color: #ffd700;
 }
 
 /* Main content */
@@ -126,18 +126,18 @@ section ul li {
 }
 
 .document-buttons a:hover {
-    background-color: #d2691e; /* Slightly brighter for hover */
-    color: #f5f5dc; /* Full white on hover */
+    background-color: #d2691e;
+    color: #f5f5dc;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .documents p {
-    margin-bottom: 40px; /* Increase space below the paragraph */
-    text-align: center; /* Center-align the text */
-    font-size: 1.2rem; /* Slightly larger font for better readability */
-    font-weight: 500; /* Add a slight emphasis */
-    color: #8b4513; /* Match the theme color */
-    line-height: 1.8; /* Improve text spacing */
+    margin-bottom: 40px;
+    text-align: center; 
+    font-size: 1.2rem;
+    font-weight: 500; 
+    color: #8b4513;
+    line-height: 1.8; 
 }
 
 /* Centered and responsive images */
