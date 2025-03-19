@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f5f5dc;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 12px;
@@ -75,7 +75,7 @@ nav ul li a.download-button {
     padding: 8px 12px;
     border-radius: 5px;
     font-size: 1.1rem;
-    color: #fff;
+    color: #f5f5dc;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s, color 0.3s;
@@ -144,7 +144,7 @@ section ul li {
 
 .document-buttons a:hover {
     background-color: #d2691e; /* Slightly brighter for hover */
-    color: #fff; /* Full white on hover */
+    color: #f5f5dc; /* Full white on hover */
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -168,7 +168,7 @@ section ul li {
 /* Footer */
 footer {
     background-color: #8b4513;
-    color: #fff;
+    color: #f5f5dc;
     text-align: center;
     padding: 10px 0;
     position: relative;

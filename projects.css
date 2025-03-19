@@ -29,7 +29,7 @@ header {
 }
 
 .header-container {
-    background-color: rgba(139, 69, 19, 0.85); /* Semi-transparent wood-like header */
+    background-color: rgba(4, 49, 2, 0.85); /* Semi-transparent wood-like header */
     color: #f5f5dc;
     padding: 15px 20px;
     display: flex;
@@ -59,7 +59,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f5f5dc;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 12px;
@@ -68,23 +68,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffd700; /* Golden hover effect */
-}
-
-/* Download button styling */
-nav ul li a.download-button {
-    background-color: #d2691e; /* Rich color for the Download button */
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a.download-button:hover {
-    background-color: #8b4513; /* Darker on hover for contrast */
-    color: #f5f5dc; /* Light text color for hover */
 }
 
 main {
@@ -134,7 +117,7 @@ section ul li {
 
 footer {
     background-color: #8b4513;
-    color: #fff;
+    color: #f5f5dc;
     text-align: center;
     padding: 10px 0;
     position: relative;
