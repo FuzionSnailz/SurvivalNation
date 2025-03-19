@@ -36,7 +36,7 @@ header {
 }
 
 .header-container {
-    background-color: rgba(4, 49, 2, 0.85); /* Semi-transparent wood-like header */
+    background-color: rgba(4, 49, 2, 0.85);
     color: #f5f5dc;
     padding: 15px 20px;
     display: flex;

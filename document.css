@@ -112,11 +112,11 @@ section ul li {
 
 .document-buttons a {
     display: block;
-    width: 90%; /* Slightly less than paragraph width */
+    width: 90%;
     max-width: 600px;
     padding: 15px;
-    background-color: #8b4513; /* Matches site theme */
-    color: #f5f5dc; /* Light color for text */
+    background-color: #8b4513;
+    color: #f5f5dc; 
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
