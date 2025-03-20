@@ -23,7 +23,7 @@ header {
 }
 
 .subpage-header {
-    height: 500px;
+    height: 50vh;
     overflow: hidden;
     position: relative;
 }
@@ -38,18 +38,20 @@ header {
 .header-container {
     background-color: rgba(4, 49, 2, 0.85);
     color: #f5f5dc;
-    padding: 15px 20px;
+    padding: 10px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     top: 0;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
 }
 
 /* Navigation styling */
@@ -58,17 +60,18 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 
 nav ul li a {
     color: #f5f5dc;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 8px 12px;
     transition: color 0.3s;
 }
@@ -80,29 +83,30 @@ nav ul li a:hover {
 /* Intro section positioned at the bottom of the header */
 .intro {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 80%;
+    max-width: 500px;
     background-color: #f5f5dc;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .intro h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #8b4513;
 }
 
 .intro p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* Main content styling */
 main {
-    padding: 50px 20px;
+    padding: 30px 15px;
     max-width: 900px;
     margin: auto;
 }
@@ -110,14 +114,14 @@ main {
 .goal {
     background-color: #f5f5dc;
     border: 2px solid #8b4513;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .goal p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* Footer styling */
@@ -126,11 +130,78 @@ footer {
     color: #f5f5dc;
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
 footer p {
     font-size: 1rem;
 }
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .intro {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 0.95rem;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .goal p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+    }
+
+    .intro h2 {
+        font-size: 1.3rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .goal {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
