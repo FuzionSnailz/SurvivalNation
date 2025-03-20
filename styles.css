@@ -7,8 +7,8 @@
 /* Global styling */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: rgba(4, 49, 2, 0.85);
-    color: rgba(4, 49, 2, 0.85);
+    background-color: rgba(4, 49, 2);
+    color: rgba(4, 49, 2);
     line-height: 1.6;
 }
 
@@ -36,7 +36,7 @@ header {
 }
 
 .header-container {
-    background-color: rgba(4, 49, 2, 0.85);
+    background-color: rgba(4, 49, 2);
     color: #f5f5dc;
     padding: 15px 20px;
     display: flex;
