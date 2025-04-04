@@ -1,0 +1,12 @@
+{
+    "songs": [
+        {
+            "title": "Song 1",
+            "url": "https://raw.githubusercontent.com/yourusername/music-repo/main/song1.mp3"
+        },
+        {
+            "title": "Song 2",
+            "url": "https://raw.githubusercontent.com/yourusername/music-repo/main/song2.mp3"
+        }
+    ]
+}
