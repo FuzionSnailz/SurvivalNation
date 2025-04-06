@@ -1,12 +1,74 @@
 {
     "songs": [
-        {
-            "title": "Song 1",
-            "url": "https://raw.githubusercontent.com/yourusername/music-repo/main/song1.mp3"
-        },
-        {
-            "title": "Song 2",
-            "url": "https://raw.githubusercontent.com/yourusername/music-repo/main/song2.mp3"
-        }
+      {
+        "title": "Bad Move",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/BadMoveperformance.wav"
+      },
+      {
+        "title": "Blame it on the weed",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/BlameitontheWeed.wav"
+      },
+      {
+        "title": "Can't let go",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/Can'tLetGo.wav"
+      },
+      {
+        "title": "Diverge",
+        "artist": "imjustblue",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/Diverge.mp3"
+      },
+      {
+        "title": "Divine Timing",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/DivineTiming.wav"
+      },
+      {
+        "title": "Egregious",
+        "artist": "imjustblu",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/Egregious.mp3"
+      },
+      {
+        "title": "Flashing Lights",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/Flashinglights.wav"
+      },
+      {
+        "title": "Forest Gump",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/ForrestGump.wav"
+      },
+      {
+        "title": "Half Masked",
+        "artist": "imjustblu",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/halfmaskedwithtag.mp3"
+      },
+      {
+        "title": "Havoc",
+        "artist": "imjustblu",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/Havoc.mp3"
+      },
+      {
+        "title": "Late Night Drive",
+        "artist": "imjustblu",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/LateNightDrive.mp3"
+      },
+      {
+        "title": "Ne-Ne",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/Ne-Ne.wav"
+      },
+      {
+        "title": "NFL",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/NFLperformance.wav"
+      },
+      {
+        "title": "Pop Off",
+        "artist": "Ne-Ne",
+        "url": "https://raw.githubusercontent.com/fuzionsnailz/music-repo/main/PopOff.wav"
+      }
     ]
-}
+  }
