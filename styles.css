@@ -133,4 +133,35 @@ footer {
 
 footer p {
     font-size: 1rem;
-} 
+}
+/* Song list and audio player styling */
+.song-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.song-list li {
+    background-color: #f5f5dc;
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    color: #043102;
+}
+
+.song-list strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #8b4513;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.audio-player {
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+}
