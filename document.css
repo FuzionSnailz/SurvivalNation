@@ -146,11 +146,11 @@ section ul li {
 /* Footer */
 footer {
     background-color: #333333;
-    color: #ffffff;
+    color: #ffffff;       /* better contrast */
     text-align: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 20px 0;
     width: 100%;
+    /* remove: position: relative; bottom: 0; */
 }
 
 footer p {
