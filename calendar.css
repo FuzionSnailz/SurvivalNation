@@ -6,16 +6,24 @@ body {
     background-size: cover;
 }
 
-/* Page layout */
+/* Wrapper */
 .calendar-wrapper {
-    max-width: 1600px; /* wider overall */
+    max-width: 1800px;
     margin: 40px auto;
     padding: 20px;
     background: rgba(0,0,0,0.6);
     border-radius: 12px;
-    color: white;
 }
 
+/* Title */
+#monthYear {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #09ff00;
+}
+
+/* Flex layout for calendar + event panel */
 .calendar-container {
     display: flex;
     gap: 20px;
@@ -23,33 +31,23 @@ body {
 
 /* Calendar side bigger */
 .calendar-grid-wrapper {
-    flex: 4; /* take more width */
+    flex: 4; /* bigger width */
 }
 
-/* Event details smaller */
-.event-details {
-    flex: 1; 
-    background: rgba(50,50,50,0.8);
-    border-radius: 12px;
-    padding: 15px;
-    min-width: 220px;
-}
-
-/* Weekday row */
+/* Weekday labels */
 .calendar-weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .calendar-weekdays div {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
+    font-weight: bold;
+    color: #09ff00;
 }
 
-/* Date grid below weekday row */
+/* Date grid */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -59,7 +57,7 @@ body {
 .calendar-day {
     background: rgba(255,255,255,0.08);
     padding: 15px;
-    height: 120px;
+    height: 110px;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
@@ -71,10 +69,14 @@ body {
 }
 
 .day-number {
+    position: absolute;
+    top: 8px;
+    right: 12px;
     font-size: 16px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
+/* Color-coded events */
 .event-dot {
     width: 12px;
     height: 12px;
@@ -84,14 +86,56 @@ body {
     left: 8px;
 }
 
-/* Event type colors */
-.show-event { background: purple; }
-.song-release { background: green; }
-.other-event { background: orange; }
+/* Example event colors */
+.show { background: purple; }
+.release { background: green; }
+.other { background: orange; }
 
-/* Event media */
+/* Event panel smaller */
+.event-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Previous / Next text buttons */
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.nav-button {
+    cursor: pointer;
+    color: #09ff00;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.nav-button:hover {
+    color: #ffffff;
+}
+
+/* Event details styling */
+.event-details {
+    background: rgba(50,50,50,0.8);
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 220px;
+}
+
 #eventMedia img, #eventMedia a {
     display: block;
     margin-top: 10px;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 1000px) {
+    .calendar-container {
+        flex-direction: column;
+    }
+}
+
+
 

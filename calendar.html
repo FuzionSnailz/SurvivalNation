@@ -37,14 +37,10 @@
     </div>
 
     <main class="calendar-wrapper">
-        <div class="calendar-header">
-            <button id="prevMonth">&lt;</button>
-            <h2 id="monthYear">Month Year Event Calendar</h2>
-            <button id="nextMonth">&gt;</button>
-        </div>
+        <h2 id="monthYear">November 2025 Event Calendar</h2>
 
         <div class="calendar-container">
-            <!-- Calendar grid -->
+            <!-- Calendar side bigger -->
             <div class="calendar-grid-wrapper">
                 <!-- Weekday labels -->
                 <div class="calendar-weekdays">
@@ -61,15 +57,22 @@
                 <div id="calendar" class="calendar-grid"></div>
             </div>
 
-            <!-- Event details -->
-            <div id="eventDetails" class="event-details">
-                <h3 id="eventTitle">Select a date with events</h3>
-                <p id="eventDate"></p>
-                <p id="eventTime"></p>
-                <p id="eventLocation"></p>
-                <p id="eventArtist"></p>
-                <p id="eventDescription"></p>
-                <div id="eventMedia"></div>
+            <!-- Right side panel with Previous/Next above event details -->
+            <div class="event-panel">
+                <div class="month-navigation">
+                    <span id="prevMonth" class="nav-button">Previous</span>
+                    <span id="nextMonth" class="nav-button">Next</span>
+                </div>
+
+                <div id="eventDetails" class="event-details">
+                    <h3 id="eventTitle">Select a date with events</h3>
+                    <p id="eventDate"></p>
+                    <p id="eventTime"></p>
+                    <p id="eventLocation"></p>
+                    <p id="eventArtist"></p>
+                    <p id="eventDescription"></p>
+                    <div id="eventMedia"></div>
+                </div>
             </div>
         </div>
     </main>
