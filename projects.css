@@ -126,25 +126,25 @@ footer p {
 
 .featured-video-section {
     position: relative;
-    width: 100vw;              /* full viewport width */
-    margin-left: calc(-50vw + 50%); /* removes body padding */
-    margin-right: calc(-50vw + 50%);
-    min-height: 700px;         /* ensures background shows */
+    width: 100vw;               /* full viewport width */
+    left: 50%;
+    margin-left: -50vw;         /* removes body/container margins */
+    padding: 80px 20px;         /* spacing above and below video */
+    min-height: 700px;          /* ensures section has height */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding: 60px 0;
     background-image: url("featured-bkg.jpg"); /* your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 /* Content above the background */
 .featured-content {
     position: relative;
-    z-index: 2;
+    z-index: 2;                 /* above background */
     text-align: center;
     width: 100%;
     max-width: 1100px;
@@ -177,4 +177,5 @@ footer p {
     border: none;
     border-radius: 12px;
 }
+
 
