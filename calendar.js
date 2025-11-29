@@ -23,20 +23,25 @@ const events = {
     }
 };
 
-// DOM Elements
 const calendar = document.getElementById("calendar");
 const monthYear = document.getElementById("monthYear");
 const prevBtn = document.getElementById("prevMonth");
 const nextBtn = document.getElementById("nextMonth");
-const eventDetails = document.getElementById("eventDetails");
 
-function buildCalendar(month, year) {
+function buildCalendar(month, year){
     calendar.innerHTML = "";
     const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDay = new Date(year, month, 1).getDay();
     const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     monthYear.textContent = `${monthNames[month]} ${year} Event Calendar`;
 
-    for(let day=1; day <= daysInMonth; day++){
+    // blank days for alignment
+    for(let i=0;i<firstDay;i++){
+        const emptyDiv = document.createElement("div");
+        calendar.appendChild(emptyDiv);
+    }
+
+    for(let day=1; day<=daysInMonth; day++){
         const fullDate = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
         const div = document.createElement("div");
         div.classList.add("calendar-day");
@@ -65,16 +70,15 @@ function showEvent(date){
     document.getElementById("eventMedia").innerHTML = ev.media || '';
 }
 
-// Navigation
 prevBtn.addEventListener("click", ()=>{
     currentMonth--;
-    if(currentMonth < 0){ currentMonth = 11; currentYear--; }
+    if(currentMonth<0){ currentMonth=11; currentYear--; }
     buildCalendar(currentMonth, currentYear);
 });
 
 nextBtn.addEventListener("click", ()=>{
     currentMonth++;
-    if(currentMonth > 11){ currentMonth = 0; currentYear++; }
+    if(currentMonth>11){ currentMonth=0; currentYear++; }
     buildCalendar(currentMonth, currentYear);
 });
 

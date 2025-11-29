@@ -37,6 +37,39 @@ body {
     background: #444;
 }
 
+.calendar-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Make calendar side bigger and event side smaller */
+.calendar-grid-wrapper {
+    flex: 3; /* bigger */
+}
+
+.event-details {
+    flex: 1; /* smaller */
+    background: rgba(50,50,50,0.8);
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 200px;
+}
+
+/* Weekday header */
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calendar-weekdays div {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Calendar grid */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -46,7 +79,7 @@ body {
 .calendar-day {
     background: rgba(255,255,255,0.08);
     padding: 10px;
-    height: 100px;
+    height: 120px;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
@@ -76,19 +109,7 @@ body {
 .song-release { background: green; }
 .other-event { background: orange; }
 
-.calendar-container {
-    display: flex;
-    gap: 20px;
-}
-
-.event-details {
-    flex: 1;
-    background: rgba(50,50,50,0.8);
-    border-radius: 12px;
-    padding: 20px;
-    min-width: 300px;
-}
-
+/* Event media */
 #eventMedia img, #eventMedia a {
     display: block;
     margin-top: 10px;
