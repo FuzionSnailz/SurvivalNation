@@ -2,7 +2,7 @@
 body {
     font-family: 'Kanit', sans-serif;
     background-color: rgb(48, 48, 48);
-    color: rgba(48, 48, 48, 0.85);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
 }
 
@@ -30,7 +30,7 @@ header {
 
 .header-container {
     background-color: rgb(48, 48, 48);
-    color: #333333;
+    color: #ffffff;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -115,7 +115,7 @@ section ul li {
     width: 90%;
     max-width: 600px;
     padding: 15px;
-    background-color: #8b4513;
+    background-color: #64287c;
     color: #333333; 
     text-align: center;
     text-decoration: none;
@@ -126,7 +126,7 @@ section ul li {
 }
 
 .document-buttons a:hover {
-    background-color: #d2691e;
+    background-color: #64287c;
     color: #333333;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -136,7 +136,7 @@ section ul li {
     text-align: center; 
     font-size: 1.2rem;
     font-weight: 500; 
-    color: #8b4513;
+    color: #64287c;
     line-height: 1.8; 
 }
 
@@ -150,7 +150,7 @@ section ul li {
 
 /* Footer */
 footer {
-    background-color: #8b4513;
+    background-color: #64287c;
     color: #333333;
     text-align: center;
     padding: 10px 0;

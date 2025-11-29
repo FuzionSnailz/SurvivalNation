@@ -30,7 +30,7 @@ header {
 
 .header-container {
     background-color: rgb(48, 48, 48);
-    color: #333333;
+    color: #ffffff;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -59,7 +59,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333333;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 12px;
@@ -116,7 +116,7 @@ section ul li {
 }
 
 footer {
-    background-color: #8b4513;
+    background-color: #64287c;
     color: #333333;
     text-align: center;
     padding: 10px 0;
