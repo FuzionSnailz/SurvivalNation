@@ -23,7 +23,7 @@ header {
 
 .subpage-header img {
     position: absolute;
-    top: -50px;
+    top: 0px;
     left: 0;
     width: 100%;
 }
