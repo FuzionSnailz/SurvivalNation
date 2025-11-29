@@ -74,7 +74,7 @@ main {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #64287c;
+    color: #333333;
     text-align: center;
 }
 
@@ -85,7 +85,7 @@ section {
 section h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #64287c;
+    color: #333333;
 }
 
 section p, section ul {
@@ -111,7 +111,7 @@ section ul li {
 }
 
 footer {
-    background-color: #64287c;
+    background-color: #333333;
     color: #333333;
     text-align: center;
     padding: 10px 0;

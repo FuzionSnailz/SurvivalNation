@@ -103,7 +103,7 @@ main {
 
 .goal {
     background-color: #333333;
-    border: 2px solid #64287c;
+    border: 2px solid #333333;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -116,7 +116,7 @@ main {
 
 /* Footer styling */
 footer {
-    background-color: #64287c;
+    background-color: #333333;
     color: #333333;
     text-align: center;
     padding: 10px 0;
@@ -137,7 +137,7 @@ footer p {
 
 .song-list li {
     background-color: #333333;
-    border: 2px solid #64287c;
+    border: 2px solid #333333;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
