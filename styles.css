@@ -213,4 +213,22 @@ footer p {
     border-radius: 12px;
 }
 
+/* Two-column layout container */
+.two-column {
+    display: flex;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
 
+/* Make each block take half width */
+.two-column .goal {
+    flex: 1;
+}
+
+/* Make it stack on mobile */
+@media (max-width: 900px) {
+    .two-column {
+        flex-direction: column;
+    }
+}
