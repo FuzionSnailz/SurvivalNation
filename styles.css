@@ -160,64 +160,57 @@ footer p {
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 }
 
-/* ⭐ Featured Video Section ⭐ */
+/* Full-width Featured Section */
 .featured-video-section {
     position: relative;
-    width: 100%;
-    padding: 60px 20px;
-    margin-top: 0;
-    margin-bottom: 40px;
+    width: 100vw;                 /* FULL SCREEN WIDTH */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;           /* Removes any body padding constraints */
+    margin-right: -50vw;
+    padding: 80px 0;              /* Space around the video */
     overflow: hidden;
-    border-bottom: 3px solid #64287c;
 }
 
-/* Background image behind the entire section */
-.featured-bg {
+/* Background image that fills 100% across the screen */
+.featured-video-section::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("snzall.png"); /* ← your image file */
+    background-image: url("featured-bkg.jpg");  /* <-- Your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(40%);
+    filter: brightness(45%);      /* optional darkening overlay */
     z-index: 1;
 }
 
-/* All content sits above background */
+/* Content stays above background */
 .featured-content {
     position: relative;
     z-index: 2;
     text-align: center;
 }
 
-/* Title */
-.featured-title {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-    color: #ffffff;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Video box */
+/* Video container */
 .video-container {
-    max-width: 1100px;        /* takes up more of the page */
+    max-width: 1100px;
     width: 90%;
-    margin: auto;
-    background-color: #000000;
-    padding: 12px;
+    margin: 0 auto;
+    background-color: #000;
+    padding: 15px;
     border-radius: 18px;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    border: 3px solid white;
+    box-shadow: 0 0 35px rgba(255,255,255,0.25);
 }
 
 /* YouTube iframe */
 .video-container iframe {
     width: 100%;
-    height: 600px;            /* much bigger for "featured" */
-    border-radius: 12px;
+    height: 600px;  /* adjust if needed */
     border: none;
+    border-radius: 12px;
 }
