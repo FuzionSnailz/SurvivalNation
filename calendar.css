@@ -15,19 +15,19 @@ body {
     border-radius: 12px;
 }
 
-/* Month header with navigation */
+/* Month header with navigation - aligned left */
 .month-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
 .month-header h2 {
     font-size: 28px;
     color: #09ff00;
-    text-align: center;
+    margin: 0;
 }
 
 .nav-button {

@@ -1,7 +1,9 @@
 const events = {
-    "2025-03-12": { title: "SurvivalNation Showcase", type: "show", time: "7:00 PM", location: "Discord Live Event", artist: "QDex", description: "New music reveal and live Q&A session." },
-    "2025-03-20": { title: "Game Release Trailer", type: "song", time: "5:00 PM", location: "YouTube Premiere", artist: "SurvivalNation Studios", description: "First official trailer of our upcoming strategy game." },
-    "2025-04-18": { title: "Album Release Party", type: "song", time: "8:00 PM", location: "YouTube Live", artist: "QDex", description: "Celebrating the drop of the new album!" }
+    "2025-11-01": { title: "Event 1", type: "show", time: "7:00 PM", location: "Discord", artist: "QDex", description: "Test event 1", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-05": { title: "Event 2", type: "song", time: "5:00 PM", location: "YouTube", artist: "Artist 2", description: "Test event 2", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-10": { title: "Event 3", type: "show", time: "6:00 PM", location: "Club", artist: "Artist 3", description: "Test event 3", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-15": { title: "Event 4", type: "song", time: "8:00 PM", location: "Live Stream", artist: "Artist 4", description: "Test event 4", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-20": { title: "Event 5", type: "show", time: "7:30 PM", location: "Stage", artist: "Artist 5", description: "Test event 5", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" }
 };
 
 let currentDate = new Date();
@@ -20,7 +22,6 @@ function buildCalendar(month, year) {
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    // Empty cells for alignment
     for (let i = 0; i < firstDay; i++) {
         const empty = document.createElement("div");
         calendar.appendChild(empty);
@@ -52,7 +53,7 @@ function showEvent(date) {
     document.getElementById("eventTime").innerText = `Time: ${ev.time}`;
     document.getElementById("eventLocation").innerText = `Location: ${ev.location}`;
     document.getElementById("eventArtist").innerText = `Artist: ${ev.artist}`;
-    document.getElementById("eventDescription").innerText = `Description: ${ev.description}`;
+    document.getElementById("eventDescription").innerHTML = `Description: ${ev.description} <br> <a href="${ev.link}" target="_blank">Link</a>`;
     const mediaDiv = document.getElementById("eventMedia");
     mediaDiv.innerHTML = ev.media ? `<img src="${ev.media}">` : "";
 }
@@ -72,5 +73,3 @@ document.getElementById("nextMonth").addEventListener("click", () => {
 
 // Initial build
 buildCalendar(currentMonth, currentYear);
-
-
