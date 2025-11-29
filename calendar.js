@@ -3,7 +3,7 @@ const events = {
     "2025-12-07": { title: "Magazine Release", type: "show", time: "6:00 PM - 12:00 AM", location: "1995 Woodbridge St. DETROIT MI. 48207", artist: "Jaidé", description: "GET READY FOR DETROIT MICHIGAN 12/7 Dm @aiacollaborative to inquire! Tix via eventbrite", media: "e2.png", link: "https://www.instagram.com/p/DQs2W8lDgO8/" },
     "2025-11-10": { title: "Random", type: "show", time: "6:00 PM", location: "Club", artist: "Artist 3", description: "Test event 3", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
     "2025-11-15": { title: "Her", type: "song", time: "8:00 PM", location: "Live Stream", artist: "Artist 4", description: "Test event 4", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
-    "2025-11-20": { title: "Event 5", type: "show", time: "7:30 PM", location: "Stage", artist: "Artist 5", description: "Test event 5", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" }
+    "2025-11-20": { title: "Event 3", type: "show", time: "7:30 PM", location: "Stage", artist: "Artist 5", description: "Test event 5", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" }
 };
 
 let currentDate = new Date();
