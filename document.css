@@ -1,8 +1,8 @@
 /* Global styling */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: rgba(4, 49, 2);
-    color: rgba(4, 49, 2, 0.85);
+    background-color: rgb(48, 48, 48);
+    color: rgba(48, 48, 48, 0.85);
     line-height: 1.6;
 }
 
@@ -30,7 +30,7 @@ header {
 
 .header-container {
     background-color: rgba(4, 49, 2);
-    color: #f5f5dc;
+    color: #333333;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #f5f5dc;
+    color: #333333;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 8px 12px;
@@ -66,7 +66,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: #333333;
 }
 
 /* Main content */
@@ -116,7 +116,7 @@ section ul li {
     max-width: 600px;
     padding: 15px;
     background-color: #8b4513;
-    color: #f5f5dc; 
+    color: #333333; 
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
@@ -127,7 +127,7 @@ section ul li {
 
 .document-buttons a:hover {
     background-color: #d2691e;
-    color: #f5f5dc;
+    color: #333333;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -151,7 +151,7 @@ section ul li {
 /* Footer */
 footer {
     background-color: #8b4513;
-    color: #f5f5dc;
+    color: #333333;
     text-align: center;
     padding: 10px 0;
     position: relative;
