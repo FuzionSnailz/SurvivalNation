@@ -1,8 +1,8 @@
 const events = {
-    "2025-11-01": { title: "Event 1", type: "show", time: "7:00 PM", location: "Discord", artist: "QDex", description: "Test event 1", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-01": { title: "Block Party", type: "show", time: "7:00 PM", location: "Discord", artist: "QDex", description: "Test event 1", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
     "2025-11-05": { title: "Event 2", type: "song", time: "5:00 PM", location: "YouTube", artist: "Artist 2", description: "Test event 2", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
-    "2025-11-10": { title: "Event 3", type: "show", time: "6:00 PM", location: "Club", artist: "Artist 3", description: "Test event 3", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
-    "2025-11-15": { title: "Event 4", type: "song", time: "8:00 PM", location: "Live Stream", artist: "Artist 4", description: "Test event 4", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-10": { title: "Random", type: "show", time: "6:00 PM", location: "Club", artist: "Artist 3", description: "Test event 3", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
+    "2025-11-15": { title: "Her", type: "song", time: "8:00 PM", location: "Live Stream", artist: "Artist 4", description: "Test event 4", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
     "2025-11-20": { title: "Event 5", type: "show", time: "7:30 PM", location: "Stage", artist: "Artist 5", description: "Test event 5", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" }
 };
 
