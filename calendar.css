@@ -103,7 +103,8 @@ body {
 
 /* Event type colors */
 .event-show { background-color: purple !important; }
-.event-song { background-color: green !important; }
+.event-song { background-color: rgb(0, 255, 0) !important; }
+
 
 /* Event panel */
 .event-panel {
