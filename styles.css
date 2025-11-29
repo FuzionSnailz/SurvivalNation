@@ -94,9 +94,9 @@ nav ul li a:hover {
 
 /* Main content styling — WIDER */
 main {
-    padding: 50px 20px;
+    padding: 50px 0;   /* removes extra side padding */
     width: 100%;
-    max-width: 100%;   /* removes width restriction */
+    max-width: none;   /* removes all limits */
     margin: 0 auto;
 }
 
@@ -215,17 +215,23 @@ footer p {
 /* Two-column layout — WIDER */
 .two-column {
     display: flex;
+    justify-content: center;
     gap: 40px;
+
     width: 100%;
-    padding: 0 40px;
+    max-width: 1800px; /* allows large screens to use full width */
     margin: 50px auto;
+
+    padding: 0 40px;   /* light padding only */
 }
+
 
 
 /* Each block takes half */
 .two-column .goal {
     flex: 1;
-    min-width: 45%;   /* prevents blocks from shrinking too small */
+    padding: 40px;            /* thicker and wider content */
+    min-width: 48%;           /* forces them to take full width side-by-side */
 }
 
 /* Mobile stacking */
