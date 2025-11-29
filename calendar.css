@@ -103,7 +103,8 @@ body {
 .month-navigation {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    width: 250px; /* width for Previous/Next container */
+    margin: 0 auto 10px auto; /* center above calendar */
 }
 
 .nav-button {
@@ -111,10 +112,11 @@ body {
     color: #09ff00;
     font-weight: bold;
     text-decoration: underline;
+    transition: color 0.2s;
 }
 
 .nav-button:hover {
-    color: #ffffff;
+    color: #ffffff; /* highlight on hover */
 }
 
 /* Event details styling */
