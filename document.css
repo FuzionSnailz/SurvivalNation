@@ -15,27 +15,26 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    /* Removed absolute positioning */
-    position: relative;
+    position: relative; /* OK since it no longer overlaps */
     width: 100%;
     z-index: 10;
 }
 
-/* Header image wrapper */
+/* Header image wrapper (no forced height!) */
 .subpage-header {
     width: 100%;
     overflow: hidden;
-    height: 500px;
+    /* removed height: 500px; which caused overlap */
 }
 
-/* Image styling */
+/* Header image (flows naturally under header) */
 .subpage-header img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
+    /* removed absolute positioning */
 }
-
 
 h1 {
     font-size: 2.5rem;
@@ -113,7 +112,7 @@ section ul li {
     max-width: 600px;
     padding: 15px;
     background-color: #64287c;
-    color: #333333; 
+    color: #333333;
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
@@ -130,11 +129,11 @@ section ul li {
 
 .documents p {
     margin-bottom: 40px;
-    text-align: center; 
+    text-align: center;
     font-size: 1.2rem;
-    font-weight: 500; 
+    font-weight: 500;
     color: #64287c;
-    line-height: 1.8; 
+    line-height: 1.8;
 }
 
 /* Centered and responsive images */
@@ -152,7 +151,6 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: relative;
-    bottom: 0;
     width: 100%;
 }
 
