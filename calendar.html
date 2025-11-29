@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurvivalNation</title>
+    <style>
+        body {
+            background-image: url("bkg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <link rel="stylesheet" href="calendar.css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1156327740660525"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header-container">
+        <h1>SurvivalNation</h1>
+        <nav>
+            <ul>
+                <li><a href="surivalnation.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="collab.html">Collaborations</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="subpage-header">
+        <img src="header.png" alt="QDEX Header Image" class="header-image">
+    </div>
+
+    <main class="calendar-wrapper">
+        <h2 class="calendar-title">Event Calendar</h2>
+
+        <div id="calendar"></div>
+    </main>
+
+    <!-- Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="eventTitle"></h2>
+            <p><strong>Date:</strong> <span id="eventDate"></span></p>
+            <p><strong>Time:</strong> <span id="eventTime"></span></p>
+            <p><strong>Location:</strong> <span id="eventLocation"></span></p>
+            <p><strong>Artist:</strong> <span id="eventArtist"></span></p>
+            <p><strong>Description:</strong></p>
+            <p id="eventDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SurvivalNation. All rights reserved.</p>
+    </footer>
+
+    <script src="calendar.js"></script>
+</body>
+</html>

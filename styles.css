@@ -80,7 +80,7 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
-    background-color: #333333;
+    background-color: #000000;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
