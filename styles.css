@@ -20,25 +20,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     position: relative;
     width: 100%;
     z-index: 10;
 }
 
-/* Header image wrapper (no forced height!) */
+/* Header image wrapper */
 .subpage-header {
     width: 100%;
     overflow: hidden;
 }
 
-/* Header image (flows naturally under header) */
+/* Header image */
 .subpage-header img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-
 }
 
 h1 {
@@ -71,7 +69,7 @@ nav ul li a:hover {
     color: #09ff00;
 }
 
-/* Intro section positioned at the bottom of the header */
+/* Intro section in header */
 .intro {
     position: absolute;
     bottom: 10%;
@@ -94,10 +92,11 @@ nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-/* Main content styling */
+/* Main content styling — WIDER */
 main {
     padding: 50px 20px;
-    max-width: 900px;
+    max-width: 1500px; /* widened */
+    width: 100%;
     margin: auto;
 }
 
@@ -114,20 +113,23 @@ main {
     font-size: 1.2rem;
 }
 
-/* Footer styling */
+/* Footer styling — FIXED SO ADS DON'T GO UNDER */
 footer {
     background-color: #333333;
-    color: #ffffff;       /* better contrast */
+    color: #ffffff;
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    /* remove: position: relative; bottom: 0; */
+    clear: both;            /* forces footer below ads */
+    position: relative;     /* no floating */
+    z-index: 2;             /* stays above ads */
 }
 
 footer p {
     font-size: 1rem;
 }
-/* Song list and audio player styling */
+
+/* Song list & audio player */
 .song-list {
     list-style-type: none;
     padding: 0;
@@ -159,34 +161,33 @@ footer p {
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 }
 
+/* Featured video background section */
 .featured-video-section {
     position: relative;
-    width: 100vw;               /* full viewport width */
+    width: 100vw;
     left: 50%;
-    margin-left: -50vw;         /* removes body/container margins */
-    padding: 80px 20px;         /* spacing above and below video */
-    min-height: 700px;          /* ensures section has height */
+    margin-left: -50vw;
+    padding: 80px 20px;
+    min-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("snzall.png"); /* your background image */
+    background-image: url("snzall.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
 }
 
-/* Content above the background */
 .featured-content {
     position: relative;
-    z-index: 2;                 /* above background */
+    z-index: 2;
     text-align: center;
     width: 100%;
     max-width: 1100px;
     padding: 0 20px;
 }
 
-/* Title styling */
 .featured-title {
     font-size: 2.5rem;
     margin-bottom: 25px;
@@ -195,7 +196,6 @@ footer p {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Video box */
 .video-container {
     width: 100%;
     background-color: #000;
@@ -205,7 +205,6 @@ footer p {
     box-shadow: 0 0 35px rgba(255,255,255,0.25);
 }
 
-/* YouTube iframe */
 .video-container iframe {
     width: 100%;
     height: 600px;
@@ -213,22 +212,26 @@ footer p {
     border-radius: 12px;
 }
 
-/* Two-column layout container */
+/* Two-column layout — WIDER */
 .two-column {
     display: flex;
-    gap: 25px;
-    margin: 40px auto;
-    max-width: 1200px;
+    gap: 35px;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1500px;  /* widened */
+    padding: 0 20px;
 }
 
-/* Make each block take half width */
+/* Each block takes half */
 .two-column .goal {
     flex: 1;
 }
 
-/* Make it stack on mobile */
+/* Mobile stacking */
 @media (max-width: 900px) {
     .two-column {
         flex-direction: column;
+        max-width: 95%;
     }
 }
+
