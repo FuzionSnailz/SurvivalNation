@@ -1,33 +1,12 @@
-/* Separate styling for How to Play page */
+/* Global styling */
 body {
     font-family: 'Kanit', sans-serif;
-    background-color: #333333;
-    color: #333;
+    background-color: rgb(48, 48, 48);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
 }
 
-header {
-    position: relative;
-}
-
-.header-image {
-    width: 100%;
-    height: auto;
-}
-
-.subpage-header {
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-}
-
-.subpage-header img {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: 100%;
-}
-
+/* Header container (nav + title) */
 .header-container {
     background-color: rgb(48, 48, 48);
     color: #ffffff;
@@ -35,9 +14,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 0;
+
+    position: relative;
     width: 100%;
+    z-index: 10;
+}
+
+/* Header image wrapper (no forced height!) */
+.subpage-header {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Header image (flows naturally under header) */
+.subpage-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
 }
 
 h1 {
