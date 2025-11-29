@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Kanit', sans-serif;
     color: white;
     background: url("bkg.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -8,46 +8,61 @@ body {
 
 /* Wrapper */
 .calendar-wrapper {
-    max-width: 1800px;
+    max-width: 1400px;
     margin: 40px auto;
     padding: 20px;
     background: rgba(0,0,0,0.6);
     border-radius: 12px;
 }
 
-/* Title */
-#monthYear {
+/* Month header with navigation */
+.month-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.month-header h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
+    flex-grow: 1;
+    font-size: 28px;
     color: #09ff00;
 }
 
-/* Flex layout for calendar + event panel */
+.nav-button {
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.nav-button:hover {
+    color: #09ff00;
+}
+
+/* Calendar container layout */
 .calendar-container {
     display: flex;
     gap: 20px;
 }
 
-/* Calendar side bigger */
+/* Calendar grid wrapper */
 .calendar-grid-wrapper {
-    flex: 4; /* bigger width */
+    flex: 3;
 }
 
-/* Weekday labels */
+/* Weekdays row */
 .calendar-weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    margin-bottom: 10px;
-}
-
-.calendar-weekdays div {
+    margin-bottom: 5px;
     text-align: center;
     font-weight: bold;
-    color: #09ff00;
 }
 
-/* Date grid */
+/* Calendar grid */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -62,6 +77,10 @@ body {
     position: relative;
     cursor: pointer;
     transition: 0.2s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .calendar-day:hover {
@@ -69,75 +88,47 @@ body {
 }
 
 .day-number {
-    position: absolute;
-    top: 8px;
-    right: 12px;
     font-size: 16px;
-    opacity: 0.8;
+    font-weight: bold;
 }
 
-/* Color-coded events */
 .event-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
     bottom: 8px;
     left: 8px;
 }
 
-/* Example event colors */
-.show { background: purple; }
-.release { background: green; }
-.other { background: orange; }
+/* Event type colors */
+.event-show { background: purple; }
+.event-song { background: green; }
 
-/* Event panel smaller */
+/* Event panel */
 .event-panel {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Previous / Next text buttons */
-.month-navigation {
-    display: flex;
-    justify-content: space-between;
-    width: 250px; /* width for Previous/Next container */
-    margin: 0 auto 10px auto; /* center above calendar */
-}
-
-.nav-button {
-    cursor: pointer;
-    color: #09ff00;
-    font-weight: bold;
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-
-.nav-button:hover {
-    color: #ffffff; /* highlight on hover */
-}
-
-/* Event details styling */
-.event-details {
-    background: rgba(50,50,50,0.8);
-    border-radius: 12px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
     padding: 15px;
-    min-width: 220px;
+    max-width: 350px;
+    height: fit-content;
+    overflow-y: auto;
 }
 
-#eventMedia img, #eventMedia a {
-    display: block;
-    margin-top: 10px;
+.event-details h3 {
+    margin-top: 0;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 1000px) {
-    .calendar-container {
-        flex-direction: column;
-    }
+.event-details img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
-
-
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
