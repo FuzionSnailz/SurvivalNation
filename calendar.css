@@ -19,8 +19,8 @@ body {
 .month-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
+    justify-content: flex-start; /* everything to the left */
+    gap: 15px; /* small spacing between items */
     margin-bottom: 15px;
 }
 
