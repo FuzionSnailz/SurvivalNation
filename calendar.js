@@ -1,9 +1,6 @@
 const events = {
     "2025-11-29": { title: "NextUP 313", type: "show", time: "7:00 PM - 11:00 PM", location: "19560 Grand River Ave, Detroit, MI 48223", artist: "Jaidé", description: "Gen Z is taking over Pages Bookshop for a Tiny Desk–inspired showcase. We're Next-Up 313 and proud co-owners of Pages Bookshop 👏🏾 Come experience fresh voices, raw talent, and real vibes. Follow @hershekissis for more!!•YouTube: HersheKissis •Email: hershekissisbusiness@gmail.com (PAID inquiries only)", media: "e1.png", link: "https://www.instagram.com/p/DRFsyqfkSH-/" },
     "2025-12-07": { title: "Magazine Release", type: "show", time: "6:00 PM - 12:00 AM", location: "1995 Woodbridge St. DETROIT MI. 48207", artist: "Jaidé", description: "GET READY FOR DETROIT MICHIGAN 12/7 Dm @aiacollaborative to inquire! Tix via eventbrite", media: "e2.png", link: "https://www.instagram.com/p/DQs2W8lDgO8/" },
-    "2025-11-10": { title: "Random", type: "show", time: "6:00 PM", location: "Club", artist: "Artist 3", description: "Test event 3", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
-    "2025-11-15": { title: "Her", type: "song", time: "8:00 PM", location: "Live Stream", artist: "Artist 4", description: "Test event 4", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" },
-    "2025-11-20": { title: "Event 3", type: "show", time: "7:30 PM", location: "Stage", artist: "Artist 5", description: "Test event 5", media: "test.png", link: "https://www.instagram.com/p/DRDYNongcKM/" }
 };
 
 let currentDate = new Date();
@@ -49,14 +46,15 @@ function buildCalendar(month, year) {
 function showEvent(date) {
     const ev = events[date];
     document.getElementById("eventTitle").innerText = ev.title;
-    document.getElementById("eventDate").innerText = `Date: ${date}`;
-    document.getElementById("eventTime").innerText = `Time: ${ev.time}`;
-    document.getElementById("eventLocation").innerText = `Location: ${ev.location}`;
-    document.getElementById("eventArtist").innerText = `Artist: ${ev.artist}`;
-    document.getElementById("eventDescription").innerHTML = `Description: ${ev.description} <br> <a href="${ev.link}" target="_blank">Link</a>`;
+    document.getElementById("eventDate").innerHTML = `<strong>Date:</strong> ${date}`;
+    document.getElementById("eventTime").innerHTML = `<strong>Time:</strong> ${ev.time}`;
+    document.getElementById("eventLocation").innerHTML = `<strong>Location:</strong> ${ev.location}`;
+    document.getElementById("eventArtist").innerHTML = `<strong>Artist:</strong> ${ev.artist}`;
+    document.getElementById("eventDescription").innerHTML = `<strong>Description:</strong> ${ev.description}`;
     const mediaDiv = document.getElementById("eventMedia");
     mediaDiv.innerHTML = ev.media ? `<img src="${ev.media}">` : "";
 }
+
 
 // Navigation buttons
 document.getElementById("prevMonth").addEventListener("click", () => {
