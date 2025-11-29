@@ -20,14 +20,13 @@ function buildCalendar(month, year) {
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    // Empty cells before first day
-    for (let i=0; i<firstDay; i++) {
+    // Empty cells for alignment
+    for (let i = 0; i < firstDay; i++) {
         const empty = document.createElement("div");
         calendar.appendChild(empty);
     }
 
-    // Days
-    for (let day=1; day<=daysInMonth; day++) {
+    for (let day = 1; day <= daysInMonth; day++) {
         const fullDate = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
         const dayDiv = document.createElement("div");
         dayDiv.classList.add("calendar-day");
@@ -36,7 +35,6 @@ function buildCalendar(month, year) {
         if(events[fullDate]){
             const dot = document.createElement("div");
             dot.classList.add("event-dot");
-            // color by type
             dot.classList.add(events[fullDate].type === "show" ? "event-show" : "event-song");
             dayDiv.appendChild(dot);
 
@@ -59,19 +57,20 @@ function showEvent(date) {
     mediaDiv.innerHTML = ev.media ? `<img src="${ev.media}">` : "";
 }
 
-// Navigation
+// Navigation buttons
 document.getElementById("prevMonth").addEventListener("click", () => {
     currentMonth--;
-    if(currentMonth < 0) { currentMonth = 11; currentYear--; }
+    if(currentMonth < 0){ currentMonth = 11; currentYear--; }
     buildCalendar(currentMonth, currentYear);
 });
 
 document.getElementById("nextMonth").addEventListener("click", () => {
     currentMonth++;
-    if(currentMonth > 11) { currentMonth = 0; currentYear++; }
+    if(currentMonth > 11){ currentMonth = 0; currentYear++; }
     buildCalendar(currentMonth, currentYear);
 });
 
 // Initial build
 buildCalendar(currentMonth, currentYear);
+
 

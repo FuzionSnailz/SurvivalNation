@@ -19,15 +19,15 @@ body {
 .month-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     margin-bottom: 15px;
 }
 
 .month-header h2 {
-    text-align: center;
-    flex-grow: 1;
     font-size: 28px;
     color: #09ff00;
+    text-align: center;
 }
 
 .nav-button {
@@ -78,9 +78,9 @@ body {
     cursor: pointer;
     transition: 0.2s ease;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .calendar-day:hover {
@@ -93,8 +93,8 @@ body {
 }
 
 .event-dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     position: absolute;
     bottom: 8px;
@@ -102,8 +102,8 @@ body {
 }
 
 /* Event type colors */
-.event-show { background: purple; }
-.event-song { background: green; }
+.event-show { background-color: purple !important; }
+.event-song { background-color: green !important; }
 
 /* Event panel */
 .event-panel {
