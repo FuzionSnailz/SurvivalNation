@@ -15,12 +15,12 @@ body {
     border-radius: 12px;
 }
 
-/* Month header with navigation - aligned left */
+/* Month header with navigation */
 .month-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* everything to the left */
-    gap: 15px; /* small spacing between items */
+    justify-content: flex-start; /* left align everything */
+    gap: 10px;
     margin-bottom: 15px;
 }
 
@@ -30,11 +30,12 @@ body {
     margin: 0;
 }
 
+/* Navigation buttons */
 .nav-button {
     cursor: pointer;
     color: #ffffff;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
     transition: color 0.2s;
 }
 
@@ -78,9 +79,9 @@ body {
     cursor: pointer;
     transition: 0.2s ease;
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 
 .calendar-day:hover {
@@ -93,8 +94,8 @@ body {
 }
 
 .event-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
     bottom: 8px;
@@ -102,9 +103,8 @@ body {
 }
 
 /* Event type colors */
-.event-show { background-color: purple !important; }
-.event-song { background-color: rgb(0, 255, 0) !important; }
-
+.event-show { background: purple; }
+.event-song { background: green; }
 
 /* Event panel */
 .event-panel {
@@ -117,6 +117,20 @@ body {
     overflow-y: auto;
 }
 
+/* Event labels and values */
+.event-details p {
+    display: flex;
+    margin: 6px 0;
+    flex-wrap: wrap;
+}
+
+.event-details p strong {
+    font-weight: bold;
+    color: #09ff00; /* green labels */
+    width: 90px;
+    flex-shrink: 0;
+}
+
 .event-details h3 {
     margin-top: 0;
 }
@@ -126,18 +140,10 @@ body {
     border-radius: 8px;
 }
 
-/* Event labels styling */
-.event-details strong {
-    font-weight: bold;
-    color: #09ff00; /* green */
-    display: inline-block;
-    width: 80px; /* optional: aligns labels nicely */
-}
-
 /* Footer */
 footer {
     background-color: #333333;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
-}
+} 

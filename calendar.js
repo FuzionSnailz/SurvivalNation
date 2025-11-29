@@ -19,13 +19,15 @@ function buildCalendar(month, year) {
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
+    // Empty cells before first day
     for (let i = 0; i < firstDay; i++) {
         const empty = document.createElement("div");
         calendar.appendChild(empty);
     }
 
+    // Days
     for (let day = 1; day <= daysInMonth; day++) {
-        const fullDate = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+        const fullDate = `${year}-${String(month + 1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
         const dayDiv = document.createElement("div");
         dayDiv.classList.add("calendar-day");
         dayDiv.innerHTML = `<div class="day-number">${day}</div>`;
@@ -52,20 +54,19 @@ function showEvent(date) {
     document.getElementById("eventArtist").innerHTML = `<strong>Artist:</strong> ${ev.artist}`;
     document.getElementById("eventDescription").innerHTML = `<strong>Description:</strong> ${ev.description}`;
     const mediaDiv = document.getElementById("eventMedia");
-    mediaDiv.innerHTML = ev.media ? `<img src="${ev.media}">` : "";
+    mediaDiv.innerHTML = ev.media ? `<a href="${ev.link}" target="_blank"><img src="${ev.media}"></a>` : "";
 }
 
-
-// Navigation buttons
+// Navigation
 document.getElementById("prevMonth").addEventListener("click", () => {
     currentMonth--;
-    if(currentMonth < 0){ currentMonth = 11; currentYear--; }
+    if(currentMonth < 0) { currentMonth = 11; currentYear--; }
     buildCalendar(currentMonth, currentYear);
 });
 
 document.getElementById("nextMonth").addEventListener("click", () => {
     currentMonth++;
-    if(currentMonth > 11){ currentMonth = 0; currentYear++; }
+    if(currentMonth > 11) { currentMonth = 0; currentYear++; }
     buildCalendar(currentMonth, currentYear);
 });
 
