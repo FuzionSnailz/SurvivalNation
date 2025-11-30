@@ -258,16 +258,3 @@ footer a {
 footer a:hover {
     color: #09ff00;
 }
-
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
