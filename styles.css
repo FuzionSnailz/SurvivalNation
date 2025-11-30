@@ -4,14 +4,20 @@
     box-sizing: border-box;
 }
 
-/* Global styling */
+/* === GLOBAL STYLING === */
+html, body {
+    min-height: 100%;
+}
+
 body {
     font-family: 'Kanit', sans-serif;
     background-color: rgb(48, 48, 48);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
-    display: flex; /* enables vertical stacking */ 
-    flex-direction: column;
+
+    /* Sticky footer support */
+    position: relative;
+    padding-bottom: 140px; /* RESERVED SPACE FOR FOOTER (match footer height) */
 }
 
 /* Header container (nav + title) */
@@ -100,13 +106,13 @@ nav ul li a:hover {
 
 /* Main content styling — WIDER */
 main {
-    padding: 50px 0;   /* removes extra side padding */
+    padding: 50px 0;
     width: 100%;
-    max-width: none;   /* removes all limits */
+    max-width: none;
     margin: 0 auto;
-    flex: 1;
 }
 
+/* Goal blocks */
 .goal {
     background-color: #333333;
     border: 2px solid #ffffff;
@@ -120,20 +126,32 @@ main {
     font-size: 1.2rem;
 }
 
-/* Footer styling — FIXED SO ADS DON'T GO UNDER */
+/* === STICKY FOOTER — SAFE VERSION === */
 footer {
     background-color: #333333;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    position: relative;
-    clear: both;            /* forces footer below ads */
-    z-index: 5;             /* stays above ads */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 140px; /* MUST MATCH body padding-bottom */
 }
 
 footer p {
     font-size: 1rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #09ff00;
 }
 
 /* Song list & audio player */
@@ -226,19 +244,16 @@ footer p {
     gap: 40px;
 
     width: 100%;
-    max-width: 1800px; /* allows large screens to use full width */
+    max-width: 1800px;
     margin: 50px auto;
 
-    padding: 0 40px;   /* light padding only */
+    padding: 0 40px;
 }
 
-
-
-/* Each block takes half */
 .two-column .goal {
     flex: 1;
-    padding: 40px;            /* thicker and wider content */
-    min-width: 48%;           /* forces them to take full width side-by-side */
+    padding: 40px;
+    min-width: 48%;
 }
 
 /* Mobile stacking */
@@ -247,14 +262,4 @@ footer p {
         flex-direction: column;
         padding: 0 20px;
     }
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #09ff00;
 }
