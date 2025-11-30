@@ -89,6 +89,9 @@ body {
 }
 
 .day-number {
+    position: absolute;
+    top: 8px;
+    right: 10px;
     font-size: 16px;
     font-weight: bold;
 }
