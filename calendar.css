@@ -19,7 +19,7 @@ body {
 .month-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* left align everything */
+    justify-content: flex-start; /* left align */
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -117,20 +117,19 @@ body {
     overflow-y: auto;
 }
 
-/* Event labels and values */
+/* Event labels and values aligned tightly */
 .event-details p {
-    display: flex;
     margin: 6px 0;
-    flex-wrap: wrap;
+    line-height: 1.4;
 }
 
 .event-details p strong {
     font-weight: bold;
     color: #09ff00; /* green labels */
-    width: 90px;
-    flex-shrink: 0;
+    margin-right: 5px; /* minimal space */
 }
 
+/* Event panel heading */
 .event-details h3 {
     margin-top: 0;
 }
@@ -138,6 +137,7 @@ body {
 .event-details img {
     max-width: 100%;
     border-radius: 8px;
+    margin-top: 10px;
 }
 
 /* Footer */
@@ -147,3 +147,4 @@ footer {
     text-align: center;
     padding: 20px 0;
 } 
+
