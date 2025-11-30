@@ -244,12 +244,3 @@ footer a:hover {
     color: #09ff00;
 }
 
-/* --------------------------------------------------
-   FIX GOOGLE ADS LAYERING
--------------------------------------------------- */
-ins.adsbygoogle {
-    display: block !important;
-    position: relative !important;
-    z-index: 1 !important;
-    margin: 20px auto !important;
-}
