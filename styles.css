@@ -125,8 +125,8 @@ footer {
     padding: 20px 0;
     width: 100%;
     clear: both;            /* forces footer below ads */
-    position: relative;     /* no floating */
-    z-index: 2;             /* stays above ads */
+    
+    z-index: 5;             /* stays above ads */
 }
 
 footer p {
