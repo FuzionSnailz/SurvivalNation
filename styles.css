@@ -4,19 +4,12 @@
     box-sizing: border-box;
 }
 
-/* Required for footer to stay at bottom */
-html, body {
-    height: 100%;
-}
-
+/* Global styling */
 body {
     font-family: 'Kanit', sans-serif;
     background-color: rgb(48, 48, 48);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
-
-    display: flex;             /* enables vertical stacking */
-    flex-direction: column;    /* stack from top to bottom */
 }
 
 /* Header container (nav + title) */
@@ -105,12 +98,10 @@ nav ul li a:hover {
 
 /* Main content styling — WIDER */
 main {
-    padding: 50px 0;
+    padding: 50px 0;   /* removes extra side padding */
     width: 100%;
-    max-width: none;
+    max-width: none;   /* removes all limits */
     margin: 0 auto;
-
-    flex: 1;   /* THIS makes the footer stick to the bottom */
 }
 
 .goal {
@@ -126,38 +117,20 @@ main {
     font-size: 1.2rem;
 }
 
-/* Footer styling — now fixed correctly */
+/* Footer styling — FIXED SO ADS DON'T GO UNDER */
 footer {
     background-color: #333333;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    margin-top: auto;          /* pushes footer to the bottom */
-    position: relative;
-    z-index: 5;
+    clear: both;            /* forces footer below ads */
+    position: relative;     /* no floating */
+    z-index: 2;             /* stays above ads */
 }
 
 footer p {
     font-size: 1rem;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #09ff00;
-}
-
-/* Fix Google Ads floating under footer */
-ins.adsbygoogle {
-    display: block !important;
-    position: relative !important;
-    z-index: 1 !important;
-    margin: 20px auto !important;
 }
 
 /* Song list & audio player */
@@ -248,17 +221,21 @@ ins.adsbygoogle {
     display: flex;
     justify-content: center;
     gap: 40px;
+
     width: 100%;
-    max-width: 1800px;
+    max-width: 1800px; /* allows large screens to use full width */
     margin: 50px auto;
-    padding: 0 40px;
+
+    padding: 0 40px;   /* light padding only */
 }
+
+
 
 /* Each block takes half */
 .two-column .goal {
     flex: 1;
-    padding: 40px;
-    min-width: 48%;
+    padding: 40px;            /* thicker and wider content */
+    min-width: 48%;           /* forces them to take full width side-by-side */
 }
 
 /* Mobile stacking */
@@ -267,4 +244,14 @@ ins.adsbygoogle {
         flex-direction: column;
         padding: 0 20px;
     }
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #09ff00;
 }
