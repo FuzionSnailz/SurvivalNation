@@ -41,7 +41,7 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Kanit', sans-serif, monospace;
 }
 
 h2 {
@@ -155,7 +155,7 @@ footer p {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #64287c;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Kanit', sans-serif, monospace;
 }
 
 .audio-player {
@@ -197,7 +197,7 @@ footer p {
     margin-bottom: 25px;
     color: #ffffff;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Kanit', sans-serif, monospace;
 }
 
 .video-container {
