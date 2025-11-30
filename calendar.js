@@ -1,6 +1,9 @@
 const events = {
     "2025-11-29": { title: "Next-UP 313", type: "show", time: "7:00 PM - 11:00 PM", location: "19560 Grand River Ave, Detroit, MI 48223", artist: "Jaidé", description: "Gen Z is taking over Pages Bookshop for a Tiny Desk–inspired showcase. We're Next-Up 313 and proud co-owners of Pages Bookshop 👏🏾 Come experience fresh voices, raw talent, and real vibes. Follow @hershekissis for more!!•YouTube: HersheKissis •Email: hershekissisbusiness@gmail.com (PAID inquiries only)", media: "e1.png", link: "https://www.instagram.com/p/DRFsyqfkSH-/" },
     "2025-12-07": { title: "Magazine Release", type: "show", time: "6:00 PM - 12:00 AM", location: "1995 Woodbridge St. DETROIT MI. 48207", artist: "Jaidé", description: "GET READY FOR DETROIT MICHIGAN 12/7 Dm @aiacollaborative to inquire! Tix via eventbrite", media: "e2.png", link: "https://www.instagram.com/p/DQs2W8lDgO8/" },
+    "2025-12-07": { title: "Spades", type: "song", time: "9:00 AM EST", location: "All Music Straming Platforms", artist: "KWA ft.ANT$", description: "New Music Release", media: "ant2.png"},
+    "2025-12-07": { title: "Maybe If I Fall Back", type: "song", time: "9:00 AM EST", location: "All Music Straming Platforms", artist: "ANT$", description: "New Music Release", media: "ant11.png"},
+    "2025-12-07": { title: "My Mind", type: "song", time: "9:00 AM EST", location: "All Music Straming Platforms", artist: "ANT$", description: "New Music Release", media: "ant6.png"},
 };
 
 let currentDate = new Date();
