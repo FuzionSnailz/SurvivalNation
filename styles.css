@@ -10,6 +10,8 @@ body {
     background-color: rgb(48, 48, 48);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
+    display: flex; /* enables vertical stacking */ 
+    flex-direction: column;
 }
 
 /* Header container (nav + title) */
@@ -102,6 +104,7 @@ main {
     width: 100%;
     max-width: none;   /* removes all limits */
     margin: 0 auto;
+    flex: 1;
 }
 
 .goal {
@@ -124,8 +127,8 @@ footer {
     text-align: center;
     padding: 20px 0;
     width: 100%;
+    position: relative;
     clear: both;            /* forces footer below ads */
-    
     z-index: 5;             /* stays above ads */
 }
 
