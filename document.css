@@ -167,7 +167,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("snzall.png"); /* your background image */
+    background-image: url("assets/snzall.png"); /* your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
