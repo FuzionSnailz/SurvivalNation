@@ -4,6 +4,7 @@ const events = {
     "2025-12-09": { title: "Spades", type: "song", time: "9:00 AM EST", location: "All Music Straming Platforms", artist: "KWA ft.ANT$", description: "New Music Release", media: "assets/ANT2.png"},
     "2025-12-16": { title: "Maybe If I Fall Back", type: "song", time: "9:00 AM EST", location: "All Music Straming Platforms", artist: "ANT$", description: "New Music Release", media: "assets/ANT11.png"},
     "2025-12-23": { title: "My Mind", type: "song", time: "9:00 AM EST", location: "All Music Straming Platforms", artist: "ANT$", description: "New Music Release", media: "assets/ANT6.png"},
+    "2026-01-04": { title: "Magazine Release", type: "show", time: "6:00 PM - 12:00 AM", location: "1995 Woodbridge St. DETROIT MI. 48207", artist: "Jaidé", description: "AIA COLLABORATIVE PRESENTS, Network, Live Music, Drinks, Food, Media. Text: 313-905-1927 for TIX or to perform", media: "assets/e3.jpeg"},
 };
 
 let currentDate = new Date();
