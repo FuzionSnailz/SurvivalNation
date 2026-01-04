@@ -1,0 +1,72 @@
+/* Collab Page Container */
+.collab-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Individual Collaboration Card */
+.collab-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+}
+
+/* Collaborator Image */
+.collab-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 3px solid #09ff00;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collab-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #09ff00;
+}
+
+/* Text Area */
+.collab-info {
+    flex: 1;
+}
+
+/* Collaborator Name */
+.collab-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #09ff00;
+    font-family: 'Kanit', sans-serif, monospace;
+}
+
+/* Collaborator Description */
+.collab-info p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Stack */
+@media (max-width: 700px) {
+    .collab-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .collab-info h3 {
+        text-align: center;
+    }
+}
