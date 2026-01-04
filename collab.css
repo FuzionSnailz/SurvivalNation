@@ -1,16 +1,23 @@
 /* ================================
    COLLAB PAGE CONTAINER
+   (STACKED VERTICALLY)
 ================================ */
 .collab-container {
+    width: 100%;
     max-width: 1500px;
-    margin: 70px auto;
+    margin: 80px auto;
     padding: 0 40px;
+
+    display: flex;
+    flex-direction: column;   /* forces vertical stacking */
+    gap: 50px;                /* space between collaborators */
 }
 
 /* ================================
-   INDIVIDUAL COLLAB CARD
+   INDIVIDUAL COLLAB BLOCK
 ================================ */
 .collab-card {
+    width: 100%;
     display: flex;
     align-items: flex-start;
     gap: 40px;
@@ -18,14 +25,13 @@
     background: rgba(0, 0, 0, 0.45);
     border: 2px solid #ffffff;
     border-radius: 18px;
-    padding: 40px;
-    margin-bottom: 40px;
+    padding: 45px;
 
     box-shadow: 2px 2px 15px rgba(0,0,0,0.45);
 }
 
 /* ================================
-   COLLAB IMAGE
+   COLLAB IMAGE (LEFT)
 ================================ */
 .collab-card img {
     width: 220px;
@@ -44,7 +50,7 @@
 }
 
 /* ================================
-   TEXT CONTENT
+   TEXT CONTENT (RIGHT)
 ================================ */
 .collab-info {
     flex: 1;
