@@ -9,8 +9,8 @@
     padding: 0 40px;
 
     display: flex;
-    flex-direction: column;   /* forces vertical stacking */
-    gap: 50px;                /* space between collaborators */
+    flex-direction: column;   /* vertical stacking */
+    gap: 50px;                /* space between blocks */
 }
 
 /* ================================
@@ -27,11 +27,11 @@
     border-radius: 18px;
     padding: 45px;
 
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.45);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.45);
 }
 
 /* ================================
-   COLLAB IMAGE (LEFT)
+   COLLAB IMAGE
 ================================ */
 .collab-card img {
     width: 220px;
@@ -50,7 +50,7 @@
 }
 
 /* ================================
-   TEXT CONTENT (RIGHT)
+   TEXT CONTENT
 ================================ */
 .collab-info {
     flex: 1;
@@ -70,6 +70,24 @@
     font-size: 1.4rem;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================================
+   LINK STYLING (NO BLUE)
+================================ */
+.collab-info a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.collab-info a:hover {
+    color: #09ff00;
+    text-decoration: underline;
+}
+
+.collab-info a:visited {
+    color: #ffffff;
 }
 
 /* ================================
