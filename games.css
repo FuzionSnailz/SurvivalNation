@@ -1,0 +1,124 @@
+/* ================================
+   GAMES PAGE CONTAINER
+================================ */
+.games-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 80px auto;
+    padding: 0 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+.games-section-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #09ff00;
+    font-family: 'Kanit', sans-serif, monospace;
+    border-bottom: 3px solid #09ff00;
+    padding-bottom: 10px;
+}
+
+/* ================================
+   GAME CARD (STACKED)
+================================ */
+.game-card {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid #ffffff;
+    border-radius: 18px;
+    padding: 45px;
+
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.45);
+}
+
+/* ================================
+   GAME IMAGE
+================================ */
+.game-card img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+
+    border-radius: 14px;
+    border: 3px solid #09ff00;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #09ff00;
+}
+
+/* ================================
+   TEXT CONTENT
+================================ */
+.game-info {
+    flex: 1;
+}
+
+.game-info h3 {
+    margin-bottom: 14px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Kanit', sans-serif, monospace;
+}
+
+.game-info p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================================
+   LINK STYLING
+================================ */
+.game-card a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.game-card a:visited {
+    color: #ffffff;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+    .games-container {
+        padding: 0 25px;
+    }
+
+    .game-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 35px;
+    }
+
+    .game-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .game-info h3 {
+        font-size: 2rem;
+    }
+
+    .game-info p {
+        font-size: 1.15rem;
+    }
+}
