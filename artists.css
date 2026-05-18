@@ -1,25 +1,31 @@
-/* Artists Page Layout */
+/* ─── Artists Page Layout ─── */
 .artists-container {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
     padding: 40px 20px;
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
+/* ─── Artist Card ─── */
 .artist-card {
     background: rgba(0, 0, 0, 80%);
     border: 2px solid #ffffff;
     border-radius: 15px;
     padding: 25px;
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s, transform 0.3s;
 }
 
-/* Artist Image */
+.artist-card:hover {
+    border-color: #09ff00;
+    transform: translateY(-3px);
+}
+
+/* ─── Artist Image (square, unchanged) ─── */
 .artist-card img {
     width: 100%;
     max-width: 220px;
@@ -34,7 +40,7 @@
     box-shadow: 0 0 20px #09ff00;
 }
 
-/* Artist Name */
+/* ─── Artist Name ─── */
 .artist-card h3 {
     margin-top: 15px;
     font-size: 1.6rem;
@@ -42,50 +48,162 @@
     font-family: 'Kanit', sans-serif, monospace;
 }
 
-/* Artist Description */
+/* ─── Artist Tagline ─── */
 .artist-card p {
     margin-top: 10px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: bold;
 }
 
-/* Make UL lists look cleaner */
+/* ─── Divider ─── */
+.artist-card .divider {
+    height: 1px;
+    background: rgba(9, 255, 0, 0.2);
+    margin: 14px 0;
+}
+
+/* ─── Platform Links List ─── */
 .artist-card ul {
     margin-top: 12px;
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
-.artist-card ul li {
-    margin-bottom: 6px;
-}
-
-.artist-card a {
-    color: #ffffff;
+.artist-card ul li a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 13px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.85);
     font-weight: bold;
     text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.artist-card a:hover {
+.artist-card ul li a:hover {
+    background: rgba(9, 255, 0, 0.1);
     color: #09ff00;
+    border-color: rgba(9, 255, 0, 0.4);
 }
 
-/* Responsive — 2 per row on small screens */
-@media (max-width: 900px) {
-    .artists-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* ─── Platform Color Dots ─── */
+.platform-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
-/* Responsive — 1 per row on phones */
-@media (max-width: 600px) {
-    .artists-container {
-        grid-template-columns: 1fr;
-    }
-}
+.dot-apple   { background: #fc3c44; }
+.dot-spotify { background: #1db954; }
+.dot-youtube { background: #ff0000; }
+.dot-ig      { background: #e1306c; }
 
+/* ─── Section Title ─── */
 .overview h2 {
     text-align: center;
     width: 100%;
     margin-bottom: 40px;
+}
+
+/* ─── Hamburger Button ─── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: none;
+    border: 1.5px solid rgba(9, 255, 0, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.hamburger:hover { border-color: #09ff00; }
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    background: #09ff00;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Hamburger → X when open */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ─── Mobile Nav Drawer ─── */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.97);
+    border-top: 1px solid rgba(9, 255, 0, 0.15);
+    padding: 10px 20px 18px;
+}
+
+.mobile-nav.open { display: flex; }
+
+.mobile-nav a {
+    display: block;
+    padding: 13px 10px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.mobile-nav a:last-child { border-bottom: none; }
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    color: #09ff00;
+    padding-left: 18px;
+}
+
+/* ─── Responsive: 2 per row ─── */
+@media (max-width: 900px) {
+    .artists-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* ─── Responsive: hamburger shows, 1 per row ─── */
+@media (max-width: 600px) {
+    /* Show hamburger, hide desktop nav links */
+    .hamburger { display: flex; }
+
+    nav ul { display: none; }
+
+    .artists-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px 14px 48px;
+    }
+
+    .artist-card img {
+        max-width: 180px;
+    }
+
+    .artist-card h3 {
+        font-size: 1.35rem;
+    }
 }

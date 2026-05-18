@@ -17,6 +17,32 @@
     <link rel="stylesheet" href="artists.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1156327740660525"
      crossorigin="anonymous"></script>
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('mobile-nav');
+
+        btn.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            btn.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', isOpen);
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            });
+        });
+
+        document.addEventListener('click', e => {
+            if (!btn.contains(e.target) && !nav.contains(e.target)) {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="header-container">
@@ -31,7 +57,23 @@
                 <li><a href="calendar.html">Calendar</a></li>
                 <li><a href="https://radio.thesnzent.com">Radio</a></li>
             </ul>
+
+            <!-- Hamburger button (hidden on desktop via CSS) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
+
+<!-- Mobile drawer (right after the closing </nav> tag) -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="artists.html" class="active">Artists</a>
+    <a href="https://thesnzent.printful.me/">Merch</a>
+    <a href="collab.html">Collaborations</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="https://radio.thesnzent.com">Radio</a>
+</nav>
     </div>
     <div class="subpage-header">
         <img src="assets/header.png" alt="QDEX Header Image" class="header-image">
@@ -48,6 +90,7 @@
                 <p>Everybody gotta eat</p>
                 <ul>
                     <li>Apple Music: <a href="https://music.apple.com/us/artist/snzquint/1787232975">Listen on Apple Music here!</a></li>
+                    <li><a href="https://music.apple.com/us/artist/snzquint/1787232975"><span class="platform-dot dot-apple"></span>Apple Music</a></li>
                     <li>Spotify: <a href="https://open.spotify.com/artist/0hQROrr3Q6BW9963kBNJYo">Listen on Spotify here!</a></li>
                     <li>Youtube: <a href="https://www.youtube.com/@survivalnation8122">Subscribe to my Youtube here!</a></li>
                     <li>Youtube: <a href="https://www.youtube.com/@SNZQuint">Subscribe to my Artist Youtube here!</a></li>
