@@ -4,95 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/SNAKEZ.png">
-    <title>SurvivalNation</title>
-    <style>
-        body {
-            background-image: url("assets/snzall.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-    </style>
+    <title>Games – SurvivalNation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="games.css">
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1156327740660525"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1156327740660525" crossorigin="anonymous"></script>
 </head>
 <body>
+ 
+    <!-- ═══ HEADER / NAV ═══ -->
     <div class="header-container">
         <h1>SurvivalNation</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="games.html">Games</a></li>
+                <li><a href="games.html" class="active">Games</a></li>
                 <li><a href="artists.html">Artists</a></li>
                 <li><a href="https://thesnzent.printful.me/">Merch</a></li>
                 <li><a href="collab.html">Collaborations</a></li>
                 <li><a href="calendar.html">Calendar</a></li>
                 <li><a href="https://radio.thesnzent.com">Radio</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </div>
+ 
+    <!-- Mobile drawer -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="games.html" class="active">Games</a>
+        <a href="artists.html">Artists</a>
+        <a href="https://thesnzent.printful.me/">Merch</a>
+        <a href="collab.html">Collaborations</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="https://radio.thesnzent.com">Radio</a>
+    </nav>
+ 
+    <!-- ═══ BANNER ═══ -->
     <div class="subpage-header">
-        <img src="assets/header.png" alt="QDEX Header Image" class="header-image">
+        <img src="assets/header.png" alt="SurvivalNation Games Banner">
     </div>
-
+ 
+    <!-- ═══ PAGE TITLE ═══ -->
+    <div class="games-page-title">
+        <h2>Our Games</h2>
+        <p>Click a game to buy, or hit the download button to grab it for free</p>
+    </div>
+ 
+    <!-- ═══ GAMES ═══ -->
     <main class="games-container">
-
-        <!-- ================= BOARD GAMES ================= -->
-        <h2 class="games-section-title">Board Games</h2>
-
-        <div class="game-card">
-            <a href="https://www.thegamecrafter.com/games/overthrone-game-board-1" target="_blank">
-                <img src="assets/otcru.png" alt="Overthrone V1">
-            </a>
-
-            <div class="game-info">
-                <h3>Overthrone V1</h3>
-                <p>
-                    Your main objective is to end the game with the greatest number of points. The youngest player will go first, and the oldest will go last. 
-                    You will each take turns rolling a die. The number rolled on the die is the number of spaces you will move. After you move, preform the action 
-                    on the space that you haven ended on, and then your turn is ended. One player will take the notepad or a piece of paper to keep the score, this 
-                    person does not have to be a participant in the game.
-                </p>
+ 
+        <!-- ── BOARD GAMES ── -->
+        <div class="games-section">
+            <h2 class="games-section-title">
+                <span class="section-icon">🎲</span> Board Games
+            </h2>
+ 
+            <div class="game-card">
+                <a href="https://www.thegamecrafter.com/games/overthrone-game-board-1" target="_blank" class="game-img-link">
+                    <img src="assets/otcru.png" alt="Overthrone V1">
+                    <span class="img-overlay">View →</span>
+                </a>
+                <div class="game-info">
+                    <div class="game-meta">
+                        <span class="game-tag">Board Game</span>
+                        <span class="game-tag tag-v1">V1</span>
+                    </div>
+                    <h3>Overthrone V1</h3>
+                    <p>
+                        Your main objective is to end the game with the greatest number of points. The youngest player goes first, oldest goes last.
+                        Roll a die, move that many spaces, perform the action on your landing space, then end your turn.
+                        One player keeps score on a notepad — they don't have to be a participant.
+                    </p>
+                    <div class="game-actions">
+                        <a href="https://www.thegamecrafter.com/games/overthrone-game-board-1" target="_blank" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="game-card">
+                <a href="https://www.thegamecrafter.com/games/overthrone-game-board-2" target="_blank" class="game-img-link">
+                    <img src="assets/otninja.png" alt="Overthrone V2">
+                    <span class="img-overlay">View →</span>
+                </a>
+                <div class="game-info">
+                    <div class="game-meta">
+                        <span class="game-tag">Board Game</span>
+                        <span class="game-tag tag-v2">V2</span>
+                    </div>
+                    <h3>Overthrone V2</h3>
+                    <p>
+                        Battle to end with the highest amount of points! Play skillfully, outsmart your opponents, and claim victory.
+                        An upgraded experience from V1 with new mechanics and challenges.
+                    </p>
+                    <div class="game-actions">
+                        <a href="https://www.thegamecrafter.com/games/overthrone-game-board-2" target="_blank" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="game-card">
-            <a href="https://www.thegamecrafter.com/games/overthrone-game-board-2" target="_blank">
-                <img src="assets/otninja.png" alt="Overthrone V2">
-            </a>
-
-            <div class="game-info">
-                <h3>Overthrone V2</h3>
-                <p>
-                    In this game, you will battle to end with the highest amount of points! Play skillfully, and WIN!
-                </p>
+ 
+        <!-- ── VIDEO GAMES ── -->
+        <div class="games-section">
+            <h2 class="games-section-title">
+                <span class="section-icon">🎮</span> Video Games
+            </h2>
+ 
+            <div class="game-card">
+                <a href="Games/minesweeper.zip" download class="game-img-link">
+                    <img src="assets/Minesweeper.png" alt="Minesweeper">
+                    <span class="img-overlay">Download ↓</span>
+                </a>
+                <div class="game-info">
+                    <div class="game-meta">
+                        <span class="game-tag">Video Game</span>
+                        <span class="game-tag tag-free">Free</span>
+                    </div>
+                    <h3>Minesweeper</h3>
+                    <p>
+                        An immersive take on the classic — featuring original music, fresh gameplay mechanics,
+                        and evolving content. Download and play for free on PC.
+                    </p>
+                    <div class="game-actions">
+                        <a href="Games/minesweeper.zip" download class="btn btn-download">
+                            <span class="dl-icon">↓</span> Download Free
+                        </a>
+                    </div>
+                </div>
             </div>
+ 
         </div>
-
-        <!-- ================= VIDEO GAMES ================= -->
-        <h2 class="games-section-title">Video Games</h2>
-
-        <div class="game-card">
-            <a href="Games/minesweeper.zip" download>
-                <img src="assets/Minesweeper.png" alt="Minesweeper">
-            </a>
-
-            <div class="game-info">
-                <h3>Minesweeper</h3>
-                <p>
-                    An immersive digital experience featuring original music, gameplay mechanics,
-                    and evolving content.
-                </p>
-            </div>
-        </div>
-
+ 
     </main>
-
+ 
+    <!-- ═══ FOOTER ═══ -->
     <footer>
-        <p>&copy; 2026 SurvivalNation. All rights reserved. Contact Us: <a href="mailto:survivalnationsnz@gmail.com">survivalnationsnz@gmail.com</a></p>
+        <p>&copy; 2026 SurvivalNation. All rights reserved. &nbsp;|&nbsp;
+           <a href="mailto:survivalnationsnz@gmail.com">survivalnationsnz@gmail.com</a>
+        </p>
     </footer>
+ 
+    <!-- ═══ HAMBURGER JS ═══ -->
+    <script>
+        const btn = document.getElementById('hamburger');
+        const nav = document.getElementById('mobile-nav');
+ 
+        btn.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            btn.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', isOpen);
+        });
+ 
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            });
+        });
+ 
+        document.addEventListener('click', e => {
+            if (!btn.contains(e.target) && !nav.contains(e.target)) {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
+ 
 </body>
 </html>

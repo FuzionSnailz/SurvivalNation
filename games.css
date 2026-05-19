@@ -1,124 +1,305 @@
 /* ================================
-   GAMES PAGE CONTAINER
+   PAGE TITLE
+================================ */
+.games-page-title {
+    text-align: center;
+    padding: 48px 20px 0;
+}
+ 
+.games-page-title h2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #09ff00;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+ 
+.games-page-title p {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+}
+ 
+/* ================================
+   GAMES CONTAINER
 ================================ */
 .games-container {
     width: 100%;
-    max-width: 1500px;
-    margin: 80px auto;
+    max-width: 1400px;
+    margin: 50px auto 80px;
     padding: 0 40px;
-
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 70px;
 }
-
+ 
 /* ================================
-   SECTION HEADINGS
+   SECTION WRAPPER
+================================ */
+.games-section {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+ 
+/* ================================
+   SECTION HEADING
 ================================ */
 .games-section-title {
-    font-size: 2.6rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-weight: 900;
     color: #09ff00;
-    font-family: 'Kanit', sans-serif, monospace;
-    border-bottom: 3px solid #09ff00;
-    padding-bottom: 10px;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid rgba(9, 255, 0, 0.3);
+    padding-bottom: 12px;
 }
-
+ 
+.section-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+ 
 /* ================================
-   GAME CARD (STACKED)
+   GAME CARD
 ================================ */
 .game-card {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
-
-    background: rgba(0, 0, 0, 0.45);
-    border: 2px solid #ffffff;
+    gap: 36px;
+ 
+    background: rgba(0, 0, 0, 0.55);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
     border-radius: 18px;
-    padding: 45px;
-
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.45);
+    padding: 36px;
+ 
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s, transform 0.3s;
 }
-
+ 
+.game-card:hover {
+    border-color: rgba(9, 255, 0, 0.45);
+    transform: translateY(-3px);
+}
+ 
 /* ================================
-   GAME IMAGE
+   GAME IMAGE + OVERLAY
 ================================ */
-.game-card img {
-    width: 240px;
-    height: 240px;
+.game-img-link {
+    position: relative;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+}
+ 
+.game-img-link img {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-
     border-radius: 14px;
     border: 3px solid #09ff00;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    transition: transform 0.35s, box-shadow 0.35s, filter 0.35s;
 }
-
-.game-card img:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 25px #09ff00;
+ 
+.img-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(9, 255, 0, 0.18);
+    color: #09ff00;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 14px;
 }
-
+ 
+.game-img-link:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 0 28px rgba(9, 255, 0, 0.5);
+    filter: brightness(0.75);
+}
+ 
+.game-img-link:hover .img-overlay {
+    opacity: 1;
+}
+ 
 /* ================================
-   TEXT CONTENT
+   GAME INFO
 ================================ */
 .game-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
+ 
+/* ── Tags ── */
+.game-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+ 
+.game-tag {
+    display: inline-block;
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+}
+ 
+.tag-v1      { border-color: rgba(9, 255, 0, 0.4);  color: #09ff00;  background: rgba(9, 255, 0, 0.07); }
+.tag-v2      { border-color: rgba(9, 200, 255, 0.4); color: #09c8ff; background: rgba(9, 200, 255, 0.07); }
+.tag-free    { border-color: rgba(255, 200, 0, 0.4); color: #ffc800; background: rgba(255, 200, 0, 0.07); }
+ 
+/* ── Title ── */
 .game-info h3 {
-    margin-bottom: 14px;
-    font-size: 2.2rem;
-    font-weight: bold;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 900;
     color: #ffffff;
-    font-family: 'Kanit', sans-serif, monospace;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    margin: 0;
 }
-
+ 
+/* ── Description ── */
 .game-info p {
-    font-size: 1.4rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
 }
-
+ 
 /* ================================
-   LINK STYLING
+   ACTION BUTTONS
 ================================ */
-.game-card a {
-    color: #ffffff;
-    font-weight: bold;
+.game-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+ 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+    border: none;
 }
-
-.game-card a:visited {
-    color: #ffffff;
+ 
+.btn:active { transform: scale(0.97); }
+ 
+/* Buy / primary */
+.btn-primary {
+    background: #09ff00;
+    color: #000000;
+    box-shadow: 0 0 14px rgba(9, 255, 0, 0.3);
 }
-
+ 
+.btn-primary:hover {
+    background: #00dd00;
+    box-shadow: 0 0 22px rgba(9, 255, 0, 0.55);
+    color: #000000;
+}
+ 
+/* Download */
+.btn-download {
+    background: rgba(255, 200, 0, 0.12);
+    color: #ffc800;
+    border: 1.5px solid rgba(255, 200, 0, 0.45);
+}
+ 
+.btn-download:hover {
+    background: rgba(255, 200, 0, 0.22);
+    box-shadow: 0 0 18px rgba(255, 200, 0, 0.3);
+    color: #ffc800;
+}
+ 
+.dl-icon {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+ 
 /* ================================
-   MOBILE RESPONSIVE
+   RESPONSIVE — TABLET
 ================================ */
 @media (max-width: 900px) {
     .games-container {
-        padding: 0 25px;
+        padding: 0 24px;
+        gap: 50px;
     }
-
+ 
+    .game-card {
+        padding: 28px;
+        gap: 24px;
+    }
+ 
+    .game-img-link img {
+        width: 180px;
+        height: 180px;
+    }
+}
+ 
+/* ================================
+   RESPONSIVE — MOBILE
+================================ */
+@media (max-width: 620px) {
+    .games-container {
+        padding: 0 14px;
+        margin-top: 30px;
+    }
+ 
     .game-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 35px;
+        padding: 24px 18px;
+        gap: 20px;
     }
-
-    .game-card img {
-        width: 200px;
-        height: 200px;
+ 
+    .game-img-link img {
+        width: 160px;
+        height: 160px;
     }
-
-    .game-info h3 {
-        font-size: 2rem;
+ 
+    .game-meta {
+        justify-content: center;
     }
-
-    .game-info p {
-        font-size: 1.15rem;
+ 
+    .game-actions {
+        justify-content: center;
+    }
+ 
+    .games-page-title {
+        padding-top: 28px;
     }
 }
