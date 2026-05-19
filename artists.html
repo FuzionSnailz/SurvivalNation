@@ -18,8 +18,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1156327740660525"
      crossorigin="anonymous"></script>
     <script>
+    document.addEventListener("DOMContentLoaded", () => {
         const btn = document.getElementById('hamburger');
         const nav = document.getElementById('mobile-nav');
+
+        if (!btn || !nav) return;
 
         btn.addEventListener('click', () => {
             const isOpen = nav.classList.toggle('open');
@@ -42,6 +45,7 @@
                 btn.setAttribute('aria-expanded', false);
             }
         });
+    });
     </script>
 </head>
 <body>
