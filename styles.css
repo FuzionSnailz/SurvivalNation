@@ -210,41 +210,50 @@ nav ul li a.active {
 /* ═════════ FEATURED VIDEO ═════════ */
 
 .featured-video-section {
+    position: relative;
+
+    width: 100%;
+
     padding: 60px 20px;
 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .featured-content {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1400px;
 
     text-align: center;
 }
 
 .featured-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+
     margin-bottom: 24px;
 
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: #ffffff;
 
     font-weight: 900;
 
     text-transform: uppercase;
 
-    color: #ffffff;
+    letter-spacing: 0.08em;
 }
 
 .video-container {
+    width: 100%;
+
     background: #000;
+
+    padding: 14px;
 
     border-radius: 18px;
 
     border: 3px solid #ffffff;
 
-    padding: 14px;
-
-    box-shadow: 0 0 35px rgba(255,255,255,0.15);
+    box-shadow: 0 0 35px rgba(255,255,255,0.2);
 }
 
 .video-ratio {
@@ -277,14 +286,14 @@ nav ul li a.active {
     display: flex;
     flex-direction: column;
 
-    gap: 50px;
+    gap: 55px;
 
     width: 100%;
 
     padding: 70px 0;
 }
 
-/* BASE BLOCK */
+/* EACH BLOCK FULL WIDTH */
 
 .split-block {
     width: 100%;
@@ -292,37 +301,43 @@ nav ul li a.active {
     display: flex;
 }
 
-/* LEFT BLOCK */
+/* LEFT */
 
 .split-left {
     justify-content: flex-start;
 }
 
-/* RIGHT BLOCK */
+/* RIGHT */
 
 .split-right {
     justify-content: flex-end;
 }
 
-/* CARD */
+/* CENTER */
+
+.split-center {
+    justify-content: center;
+}
+
+/* MAIN CARDS */
 
 .block-inner {
-    width: min(700px, 90%);
+    width: 92%;
 
-    padding: 42px;
+    padding: 48px;
 
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.76);
 
     border: 2px solid rgba(9,255,0,0.35);
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     backdrop-filter: blur(8px);
 
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    box-shadow: 0 0 25px rgba(0,0,0,0.45);
 }
 
-/* RIGHT ALIGN */
+/* RIGHT ALIGNMENT */
 
 .split-right .block-inner {
     text-align: right;
@@ -330,10 +345,11 @@ nav ul li a.active {
 
 /* TITLES */
 
-.block-inner h2 {
+.block-inner h2,
+.updates-block h2 {
     color: #09ff00;
 
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
 
     font-weight: 900;
 
@@ -368,21 +384,52 @@ nav ul li a.active {
 
     margin-bottom: 22px;
 
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .split-right .block-divider {
     margin-left: auto;
 }
 
-/* PARAGRAPH */
+/* TEXT */
 
-.block-inner p:not(.block-sub) {
+.block-inner p:not(.block-sub),
+.updates-block p {
     color: rgba(255,255,255,0.88);
 
     line-height: 1.8;
 
     font-size: 1rem;
+}
+
+/* ═════════ UPDATES BLOCK ═════════ */
+
+.updates-block {
+    width: 92%;
+
+    padding: 48px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    border: 2px solid rgba(9,255,0,0.35);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9,255,0,0.35) 0%,
+            rgba(0,0,0,0.92) 18%,
+            rgba(0,0,0,0.96) 50%,
+            rgba(0,0,0,0.92) 82%,
+            rgba(9,255,0,0.35) 100%
+        );
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.center-divider {
+    margin: 0 auto 24px auto;
 }
 
 /* ═════════ FOOTER ═════════ */
@@ -430,25 +477,26 @@ footer a:hover {
 
 @media (max-width: 900px) {
 
-    .block-inner {
-        width: 92%;
+    .block-inner,
+    .updates-block {
+        width: 94%;
     }
 
 }
 
 @media (max-width: 650px) {
 
-    /* Hide desktop nav */
+    /* HIDE DESKTOP NAV */
     nav ul {
         display: none !important;
     }
 
-    /* Show hamburger */
+    /* SHOW HAMBURGER */
     .hamburger {
         display: flex;
     }
 
-    /* Make both cards align left on mobile */
+    /* MOBILE TEXT ALIGNMENT */
     .split-right .block-inner,
     .split-left .block-inner {
         text-align: left;
@@ -458,10 +506,11 @@ footer a:hover {
         margin-left: 0;
     }
 
-    .block-inner {
-        width: 92%;
+    .block-inner,
+    .updates-block {
+        width: 94%;
 
-        padding: 28px 22px;
+        padding: 30px 22px;
     }
 
     .featured-video-section {
